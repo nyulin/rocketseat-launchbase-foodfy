@@ -1,1 +1,1 @@
-# rocketseat-launchbase-foodfy
+# Foodfy by Rocketseat
