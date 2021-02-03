@@ -1,0 +1,29 @@
+
+{% extends 'layout.njk' %}
+
+{% block content %}    
+    <div class="banner">
+        <span class="banner-title">
+            <h1>As melhores receitas</h1>
+        </span>
+        <span class="banner-content">
+            <p>Aprenda a construir os melhores pratods com receitas criadas por profissionais do mundo inteiro.</p>
+        </span>
+        <img alt="Chef Foodfy" src="/chef.png" />
+    </div>
+    <div class="container">
+        <h2>Mais acessadas</h2>
+        <div class="cards">
+        {% for i in range(0, 6) %}
+            <div class="card">
+                <img src={{items[i].image}} />
+                <h3>{{items[i].title}}</h3>
+                <p>{{items[i].author}}</p>
+            </div> 
+        {% endfor %} 
+        </div>
+    </div>
+{% endblock %}
+{% block footer %}
+    <script src="/main.js"></script>
+{% endblock %}

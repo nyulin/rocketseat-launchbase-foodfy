@@ -1,0 +1,18 @@
+{% extends 'layout.njk' %}
+
+{% block content %}
+    <div class="container">
+        <div class="cards">
+            {% for item in items %}
+                <div class="card">
+                    <img src={{item.image}} />
+                    <h3>{{item.title}}</h3>
+                    <p>{{item.author}}</p>
+                </div> 
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+{% block footer %}
+    <script src="/main.js"></script>
+{% endblock %}
